@@ -1,0 +1,35 @@
+# 加载包
+suppressPackageStartupMessages(library(glmnet))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(survival))
+
+# 保留完整行
+df2 <- lasso_selection_data[complete.cases(lasso_selection_data[, c("Y_", "Age", "Gender", "BMI", "Drink", "Smoke", "Hypertension", "Diabetes", "CKD", "Anemia", "Cancer", "Sleep_disorder", "CVD_FH", "Asthma_FH", "Pred_used", "Dry_cough", "SBP_Avg", "DBP_Avg", "WBC", "LYM", "MONO", "NEUT", "ESO", "BAS", "PLT", "RBC", "Hb", "UPRO", "BUN", "UA", "SCR", "eGFR", "ALB", "ALT", "AST", "GLB", "GLU", "HbA1c", "Fe", "Na", "K_", "CL", "HCO3", "TC", "TG", "LDL", "HDL", "CRP", "FENO", "FVC", "EV", "FEV1", "PEF", "FEF", "FET", "Ca")]), ]
+
+# 响应变量与设计矩阵
+y <- with(df2, survival::Surv(`permth_exm`, `Y_`))
+x <- model.matrix(~ Age + Gender + BMI + Drink + Smoke + Hypertension + Diabetes + CKD + Anemia + Cancer + Sleep_disorder + CVD_FH + Asthma_FH + Pred_used + Dry_cough + SBP_Avg + DBP_Avg + WBC + LYM + MONO + NEUT + ESO + BAS + PLT + RBC + Hb + UPRO + BUN + UA + SCR + eGFR + ALB + ALT + AST + GLB + GLU + HbA1c + Fe + Na + K_ + CL + HCO3 + TC + TG + LDL + HDL + CRP + FENO + FVC + EV + FEV1 + PEF + FEF + FET + Ca, data = df2)[,-1]
+set.seed(1234)
+
+# 交叉验证 glmnet
+cv_fit <- glmnet::cv.glmnet(x, y, family='cox', alpha=1, nlambda=100, nfolds=10)
+lambda_best <- cv_fit$lambda.1se
+cat('Lasso: best λ =', lambda_best, '\n')
+
+# 系数表与筛选变量
+coef_tbl <- as.data.frame(as.matrix(coef(cv_fit, s = lambda_best)))
+names(coef_tbl) <- 'Coefficient'
+coef_tbl$variable <- rownames(coef_tbl)
+coef_tbl$variable <- sub('_level_$', '', coef_tbl$variable)
+coef_tbl$variable <- sub('_level_', '_', coef_tbl$variable)
+print(coef_tbl)
+nz <- coef_tbl$variable[coef_tbl$Coefficient != 0 & coef_tbl$variable != '(Intercept)']
+sel_vars <- if (length(nz)) unique(sub('_.*$', '', nz)) else character(0)
+cat('已筛选变量: ', paste(sel_vars, collapse=', '), '\n')
+
+# CV 曲线
+plot(cv_fit)
+
+# 路径图
+plot(cv_fit$glmnet.fit, xvar = 'lambda', label = TRUE)
+abline(v = log(lambda_best), lty = 2)
