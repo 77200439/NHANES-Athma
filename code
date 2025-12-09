@@ -796,7 +796,7 @@ fit_rf_cls<-randomForest::randomForest(
   mtry= mtryx,             #每个节点可供选择的变量数目
   data=data_train,
   ntree =ntreex,         #决策树棵数
-  importance =T       #输出变量重要性
+  importance =T       #输出变量重要性 
 )
 #训练集预测值
 levelclass= levels(data_train$y)
