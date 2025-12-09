@@ -33,3 +33,851 @@ plot(cv_fit)
 # 路径图
 plot(cv_fit$glmnet.fit, xvar = 'lambda', label = TRUE)
 abline(v = log(lambda_best), lty = 2)
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Age , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Gender , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ BMI , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Drink , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Smoke , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Hypertension , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Diabetes , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ CKD , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Anemia , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Cancer , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Sleep_disorder , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ CVD_FH , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Asthma_FH , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Pred_used , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Dry_cough , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ SBP_Avg , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ DBP_Avg , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ WBC , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ LYM , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ MONO , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ NEUT , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ ESO , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ BAS , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ PLT , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ RBC , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Hb , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ UPRO , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ BUN , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ UA , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ SCR , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ eGFR , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ ALB , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ ALT , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ GLB , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ AST , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ GLU , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ HbA1c , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Ca , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Fe , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ Na , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ K_ , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ CL , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ HCO3 , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ TC , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ TG , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ LDL , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ HDL , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ CRP , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ FENO , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ FVC , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ EV , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ FEV1 , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ PEF , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ FEF , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+# 模型代码
+ result <- survival::coxph( Surv(permth_exm,Y_) ~ FET , data = data_frame) 
+# 模型摘要
+summary(result)
+ # 计算风险比 (HR, Exp(Coef))和可信区间
+exp(coef(result))
+exp(confint.default(result))
+exp(confint(result))
+
+###########################
+##   基础代码1-LightGBM   #
+###########################
+library(lightgbm)  
+library(pROC)  
+library(caret) 
+library(tidyverse)
+data_train = dev %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) #%>% mutate(y=as.factor(y))
+data_valid = vad %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) #%>% mutate(y=as.factor(y))
+#数据准备
+xlen=dim(data_train)[2]-1
+library(randomForest)
+dtrain <- lgb.Dataset(data=as.matrix(data_train[,-1]), 
+                      label =data_train[,1])
+
+#设定运行参数
+params<- list( boosting_type = 'gbdt',         
+               objective = 'binary',        
+               metric = 'auc',         
+               nthread = 4,         
+               learning_rate = 0.05,         
+               max_depth =5,        
+               num_leaves = 40,        
+               sub_feature = 0.1,         
+               sub_row = 0.1,         
+               bagging_freq = 1 )
+
+#进行lightGBM模型构建
+lgb_model <- lgb.train( params = params,
+                        data = dtrain,
+                        nrounds = 1000,
+                        verbose = -1)
+#训练集预测值
+lgb_preddev <- predict(lgb_model,as.matrix(data_train[,-1]))
+lgb_predvad <- predict(lgb_model,as.matrix(data_valid[,-1]))
+
+
+
+
+##########################
+##   基础代码2-KNN        #
+##########################
+library(kknn)
+library(pROC)
+library(caret)
+library(fastDummies)
+data_train = dev %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y),type="1") 
+data_valid = vad %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y),type="2")
+#数据准备
+dfx=rbind(data_train,data_valid)
+## center-scale
+df0=dfx %>% dplyr::select(y,type)
+
+##对哑变量重新命名
+if(is.null(dumy)){
+  #df2= dfx %>% dplyr::select(-y)
+  df1= dfx %>% dplyr::select(-y,-type)
+  df_norm <- preProcess(df1, method = c("center", "scale"))
+  df_norm <- predict(df_norm, df1)
+  df2=dfx %>% mutate(id=1:n()) %>% select(id)
+} else {
+  df1= dfx %>% dplyr::select(-y,-dumy,-type)
+  df_norm <- preProcess(df1, method = c("center", "scale"))
+  df_norm <- predict(df_norm, df1)
+  
+  ydu= dfx %>% dplyr::select(dumy)
+  dvfunc <-dummyVars( ~., data = ydu,fullRank = T)
+  df2 <-predict(dvfunc,newdata=ydu) %>% as.data.frame() %>% mutate(id=1:n())
+}
+dfall=cbind(df0,df_norm,df2) %>% select(-id)
+
+## 并数据集
+data_train = dfall %>% filter(type=="1") %>% select(-type)
+data_valid = dfall %>% filter(type=="2") %>% select(-type)
+
+
+#xgb合并数据集
+#knn_fit <- svm(y ~ ., data = data_train, kernel = "linear", probability = TRUE)  
+k_value <- k  # 设置K值,一般3-10
+knn_fit <- train.kknn(y ~ ., data_train,ks = k_value)   #这个输出到模型摘要
+
+#模型概要------这个要输出
+#summary(knn_fit)
+#预测
+trainpred=predict(knn_fit, data_train, probability=TRUE)
+testpred=predict(knn_fit, data_valid, probability=TRUE)
+#得到标号为"yes"的概率
+trainpredprob = attr(trainpred, "probabilities")
+# trainprob = pred.trainprob[, 2]
+testpredprob = attr(testpred, "probabilities")
+# testprob = pred.testprob[, 2]
+# 预测测试集
+trainpredprob<-as.numeric(predict(knn_fit, newdata=data_train,type = "prob")[,2])
+testpredprob<- as.numeric(predict(knn_fit, newdata=data_valid,type = "prob")[,2])
+
+
+
+##########################
+##   基础代码3-SVM        #
+##########################
+
+#准备数据
+library(e1071)
+library(fastDummies)
+data_train = dev %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y),type="1") 
+data_valid = vad %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y),type="2")
+#数据准备
+dfx=rbind(data_train,data_valid)
+## center-scale
+df0=dfx %>% dplyr::select(y,type)
+
+##对哑变量重新命名
+if(is.null(dumy)){
+  #df2= dfx %>% dplyr::select(-y)
+  df1= dfx %>% dplyr::select(-y,-type)
+  df_norm <- preProcess(df1, method = c("center", "scale"))
+  df_norm <- predict(df_norm, df1)
+  df2=dfx %>% mutate(id=1:n()) %>% select(id)
+} else {
+  df1= dfx %>% dplyr::select(-y,-dumy,-type)
+  df_norm <- preProcess(df1, method = c("center", "scale"))
+  df_norm <- predict(df_norm, df1)
+  
+  ydu= dfx %>% dplyr::select(dumy)
+  dvfunc <-dummyVars( ~., data = ydu,fullRank = T)
+  df2 <-predict(dvfunc,newdata=ydu) %>% as.data.frame() %>% mutate(id=1:n())
+  
+}
+dfall=cbind(df0,df_norm,df2) %>% select(-id)
+
+## 并数据集
+data_train = dfall %>% filter(type=="1") %>% select(-type)
+data_valid = dfall %>% filter(type=="2") %>% select(-type)
+
+
+#xgb合并数据集
+svm_fit <- svm(y ~ ., data = data_train, 
+               kernel = "linear", probability = TRUE)  
+
+#模型概要-
+summary(svm_fit)
+#预测
+trainpred=predict(svm_fit, data_train, probability=TRUE)
+testpred=predict(svm_fit, data_valid, probability=TRUE)
+
+#得到标号为"yes"的概率
+trainpredprob = attr(trainpred, "probabilities")
+
+testpredprob = attr(testpred, "probabilities")
+
+
+##########################
+##   基础代码4-xgboost  #
+##########################
+#准备数据
+library(xgboost)
+data_train = dev %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) #%>% mutate(y=as.factor(y))
+data_valid = vad %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) #%>% mutate(y=as.factor(y))
+#数据准备
+xlen=dim(data_train)[2]-1
+library(randomForest)
+dvfunc <-dummyVars( ~., data = data_train[2:xlen],fullRank = T)
+#训练集
+data_trainx <-predict(dvfunc,newdata=data_train[2:xlen])
+data_trainy <-data_train[,1]
+data_trainy<-as.numeric(data_trainy)
+#验证集
+data_validx<-predict(dvfunc,newdata = data_valid[,2:xlen])
+data_validy <-data_valid[,1]
+data_validy <-as.numeric(data_validy)
+
+#xgb合并数据集
+dtrain <- xgb.DMatrix(data=data_trainx,label=data_trainy)
+dvalid <- xgb.DMatrix(data=data_validx,label=data_validy)
+watchlist<-list(train=dtrain,test=dvalid)
+set.seed(123456)
+#训练模型
+fit_xgb_cls <-xgb.train(
+  data=dtrain, 
+  booster="gbtree",
+  eta=0.3,              #学习率
+  gamma = 0.001,        #
+  max_depth=2,          #树的深度
+  subsample = 0.7,      #构建树选取70%样本
+  colsample_bytree=0.4, #树节点分类时有40%的备选样本
+  objective = "binary:logistic",
+  nrounds = 1000,       #迭代次数
+  #eval_metric = "auc",
+  watchlist = watchlist,
+  verbose = 1,          #展示训练过程
+  print_every_n=100,    #每迭代100次展示一下结果
+  early_stopping_rounds = 200   #某个结果后，再迭代200次，如果没有比前面高的结果，就终止
+)
+
+#模型概要------这个要输出
+fit_xgb_cls 
+#变量重要性
+importance_matrix<-xgb.importance(model = fit_xgb_cls)
+print(importance_matrix)       #这个要输出
+
+#训练集预测概率
+trainpredprob <- predict(fit_xgb_cls,newdata=dtrain)
+#训练集ROC
+library(pROC)
+trainroc <-roc(response =data_train$y ,predictor =trainpredprob )#预测概率
+
+#约登法则
+bestp <-trainroc$thresholds[which.max(trainroc$sensitivities+trainroc$specificities -1)]
+bestp
+#训练集预测分类
+trainpredlab <-as.factor(ifelse(trainpredprob>bestp, "1","0"))
+
+#训练集混淆矩阵
+data_train$y<-as.factor(data_train$y)
+s1=confusionMatrix(data=trainpredlab,             #预测类别
+                   reference = data_train$y,  #实际类别
+                   positive = "1", 
+                   mode = "everything")
+
+
+
+##验证集混淆矩阵
+##-----------------------------------------------------------------
+#测试集预测概率
+testpredprob<-predict(fit_xgb_cls, newdata=dvalid)
+#测试集预测分类
+testpredlab <-as.factor(ifelse(testpredprob > bestp,"1","0"))
+
+##变量重要性
+imp=importance_matrix
+
+
+##########################
+##   基础代码5-随机森林  #
+##########################
+
+library(lightgbm)  
+library(pROC)  
+library(caret) 
+library(tidyverse)
+library(rmda)
+# mydata=data
+# dev=mydata;vad=mydata;
+# y="class";xva=colnames(mydata)[1:9];dumy=NULL
+
+data_train = dev %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y))
+data_valid = vad %>%na.omit() %>%  dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y))
+#数据准备
+xlen=dim(data_train)[2]-1
+library(randomForest)
+set.seed(123)#保证结果的可重复性
+#进行RF模型构建
+fit_rf_cls<-randomForest::randomForest(
+  y~., 
+  mtry= mtryx,             #每个节点可供选择的变量数目
+  data=data_train,
+  ntree =ntreex,         #决策树棵数
+  importance =T       #输出变量重要性
+)
+#训练集预测值
+levelclass= levels(data_train$y)
+trainpredprob<-predict(fit_rf_cls, newdata=data_train, type = "prob")
+#训练集ROC
+trainroc <-roc(response =data_train$y ,#实际类别
+               predictor =trainpredprob[,2])#预测概率
+
+#约登法则 
+bestp<-trainroc$thresholds[which.max (trainroc$sensitivities+trainroc$specificities -1)]
+#print(bestp )
+#训练集预测分类
+trainpredlab <-as.factor(ifelse( trainpredprob[, 2] > bestp, levelclass[2],levelclass[1] ))
+#测试集预测概率
+testpredprob<-predict(fit_rf_cls, newdata=data_valid, type = "prob")#测试集预测分类
+testpredlab <-as.factor(ifelse( testpredprob[,2] > bestp, levelclass[2],levelclass[1]))
+
+
+##########################
+##   基础代码6-决策树    #
+##########################
+traindata = dev %>% dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y))
+testdata = vad %>% dplyr::select(y,xva) %>% 
+  dplyr::rename("y"=1) %>% mutate(y=as.factor(y))
+#构建决策树
+fit_dt<-rpart::rpart(y~.,
+                     data=traindata,
+                     method = "class",
+                     parms = list(split="information")
+)
+##训练集混淆矩阵
+traindata$trainpred<-predict(fit_dt,traindata,type='class')
+
+dft1<-table(traindata$y,traindata$trainpred)
+
+s1=confusionMatrix(dft1, positive ="1",mode = "everything")
+
+##验证集混淆矩阵
+testdata$testpred<-predict(fit_dt,testdata,type='class')
+
+dft2<-table(testdata$y,testdata$testpred)
+
+s2=confusionMatrix(dft2,  positive ="1",mode = "everything")
+
+
+##########################
+##   基础代码7-LR        #
+##########################
+library(lightgbm)  
+library(pROC)  
+library(caret) 
+library(tidyverse)
+library(rmda)
+# mydata=data
+# dev=mydata;vad=mydata;
+# y="class";xva=colnames(mydata)[1:9];dumy=NULL
+
+data_train = dev %>% #na.omit() %>% 
+  dplyr::select(y,xva) %>% dplyr::rename("y"=1) %>% mutate(y=as.factor(y))
+data_valid = vad %>% #na.omit() %>%  
+  dplyr::select(y,xva) %>% dplyr::rename("y"=1) %>% mutate(y=as.factor(y))
+#数据准备
+#modelA = glm(y~., data = devroc, family = binomial(logit))
+
+#进行RF模型构建
+fit_rf_cls<- glm(y~.,data = data_train, family =  binomial(logit))
+
+#训练集预测值
+levelclass= levels(data_train$y)
+trainpredprob<-predict(fit_rf_cls, newdata=data_train, type = "response")
+
+#训练集ROC
+trainroc <-roc(response =data_train$y ,#实际类别
+               predictor =trainpredprob)#预测概率
+
+#约登法则 
+bestp<-trainroc$thresholds[which.max (trainroc$sensitivities+trainroc$specificities -1)]
+#print(bestp )
+#训练集预测分类
+trainpredlab <-as.factor(ifelse( trainpredprob > bestp, levelclass[2],levelclass[1] ))
+#测试集预测概率
+testpredprob<-predict(fit_rf_cls, newdata=data_valid, type = "response")#测试集预测分类
+testpredlab <-as.factor(ifelse( testpredprob > bestp, levelclass[2],levelclass[1]))
